@@ -31,4 +31,7 @@ find /app/web/assets -type f -print0 | xargs -0 chmod 666
 
 # start PHP and nginx
 service php5-fpm start
-/usr/sbin/nginx
+/usr/sbin/nginx &
+
+# start postgresql
+/docker-entrypoint.sh postgres
